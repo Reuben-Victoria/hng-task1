@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HNG-task1</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <h1 data-testid="slackUserName">Reuben Victoria</h1>
+    <div data-testid="slackDisplayImage" class="image">
+      <img
+        src="https://ca.slack-edge.com/T05FFAA91JP-U05SBPDFWSC-ad1b85bb9dd2-512"
+        alt="reuben-victoria"
+      />
+    </div>
+    <p data-testid="currentDayOfTheWeek" id="day">0</p>
+    <p data-testid="currentUTCTime" id="currentTime"></p>
+    <p data-testid="myTrack">Frontend</p>
+    <a href=""></a>
+  </body>
+  <script>
+    const currentDate = new Date();
+    const daysOfWeek = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+    const currentDayOfWeek = daysOfWeek[currentDate.getDay()];
+
+    const currentUTCTime = new Date().toISOString();
+    document.querySelector("#day").textContent = currentDayOfWeek;
+    document.querySelector("#currentTime").textContent = currentUTCTime;
+  </script>
+</html>
