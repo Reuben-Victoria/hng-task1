@@ -39,9 +39,13 @@
     ];
     const currentDayOfWeek = daysOfWeek[currentDate.getDay()];
 
-    const currentUTCTime = new Date().toISOString();
-    const milliSeconds = new Date(currentUTCTime).getTime();
-    document.querySelector("#day").textContent = currentDayOfWeek;
-    document.querySelector("#currentTime").textContent = milliSeconds;
+    function milliSeconds() {
+      const currentUTCTime = new Date().toISOString();
+      const milliSeconds = new Date(currentUTCTime).getTime();
+      document.querySelector("#day").textContent = currentDayOfWeek;
+      document.querySelector("#currentTime").textContent = milliSeconds;
+    }
+
+    setInterval(milliSeconds, 1000);
   </script>
 </html>
