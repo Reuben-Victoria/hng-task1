@@ -40,7 +40,8 @@
     const currentDayOfWeek = daysOfWeek[currentDate.getDay()];
 
     const currentUTCTime = new Date().toISOString();
+    const milliSeconds = new Date(currentUTCTime).getTime();
     document.querySelector("#day").textContent = currentDayOfWeek;
-    document.querySelector("#currentTime").textContent = currentUTCTime;
+    document.querySelector("#currentTime").textContent = milliSeconds;
   </script>
 </html>
